@@ -1,0 +1,215 @@
+.small{font-size:90%;}
+.wf_panel_wrapper{    
+	position: relative;
+    overflow: initial;
+    margin: 16px 0;
+    padding: 15px;
+    border: 1px solid #c3c4c7;**/
+    box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
+    background: #fff;
+    font-size: 13px;
+    line-height: 1.7;
+	}
+.wf_panel_wrapper .wf_settings{
+	display:block; 
+	width:100%;
+	max-width:100%;
+	background-color:#fefefe;
+	border-bottom:1px solid #dedede;	
+	padding-bottom:1em;
+}
+.wf_panel_wrapper #words,.wf_panel_wrapper #controls{
+	box-sizing:border-box;
+	width:100%;
+	max-width:100%;
+		
+}
+
+.wf_panel_wrapper input[type="number"]{width:auto;}
+.wf_settings label{width:100%;display:block; padding:10px 0;}
+label[for=secret-word]{ height:0;padding:0; overflow:hidden;transition:0.4s all ease-in-out;margin-top:1em;display:block;}
+label[for=secret-word].active{height:auto;padding:10px 0;margin:0;}
+.wf_floating {    
+    position: relative;
+    margin-top: 10px;
+    display: inline-block;
+	width:50%;
+}
+.wf_floating span{
+	position: absolute;
+    top: -20px;
+    background-color: #fff;
+    padding: 0 5px;
+}
+#words li.word{
+	border:1px solid #141414;
+	border-radius: 5px;
+    margin-top: 10px;
+}
+#words .wf_floating.hint{width:0; /*height:0;**/ overflow:hidden;border:0;padding:0;}
+#words.show-hints .wf_floating.hint{width:50%;/* height:20px; */transition:0.4s all ease-in-out;border:initial;padding:initial;overflow:initial;}
+
+#words.disabled input{pointer-events:none; border:0;}
+#words.disabled .wf_floating span{display:none;}
+#words.disabled .wf_floating {margin:0;vertical-align:bottom;}
+#words.disabled li.word{border:0;}
+
+.orientation-item{padding:5px 18px 5px 10px; border-radius:5px; background-color:#dedede;margin:0 10px; transition:0.4s all ease-in-out;position:relative;}
+.orientation-item .close{position:absolute; width:5px; height:5px; right:3px; top:0px;font-size:10px;;cursor:pointer;font-family:monospace;}
+
+.wf_puzzle_container{position:relative; overflow:hidden;}
+
+.wf_grid_buttons{position:absolute;left:5000px;transition:0.4s all ease-in-out;}
+.wf_grid_buttons.active{position:relative; left:initial;}
+
+
+.wf_puzzles_wrapper{
+	display:grid;
+	grid-template-columns:auto auto auto;
+}
+.wf_puzzle_item{
+	background-color:#fff;
+	border:1px solid #dedede;
+	padding:1rem;
+	margin:0.5rem;
+	position:relative;
+	transition:0.4s all ease-in-out;
+}
+.wf_puzzle_item.inactive{display:none;}
+.wf_puzzle_item.active{display:initial; }
+.pdf_url,#pdf_url{display:none;}
+.puzle_item_id{
+	position:absolute;
+	padding:5px 10px;
+	top:0;
+	left:0;
+	width:auto;
+	font-weight:bold;
+	border-bottom-right-radius:5px;
+	background-color:#ddd;
+	
+}
+.puzzle_table{
+	padding:10px;
+	border:1px solid #adadad;
+	display:inline-block;
+	margin:0 10px 10px 0;
+}
+.button{margin-top:5px;}
+.button.button-delete{    
+	color: #d82424;
+    border: 1px solid #d82424;
+   
+}
+.button.button-delete:hover,.button.button-delete:active,.button.button-delete:active:focus{
+	box-shadow:none;background-color: #f3dcdc;color: #8d2424;
+    border: 1px solid #8d2424;
+}
+#puzzle > div{display:flex;}
+.puzzleSquare{
+	width:18px;
+	height:18px;
+	font-size:14px;
+	display:inline-grid;
+	place-content:center;
+	text-transform: none;
+    background-color: white;
+    border: 0;
+	border:1px solid #eee;
+}
+ol.wordlist{   
+	display: inline-block;
+    vertical-align: top;
+	/*text-transform:uppercase;*/}
+.orientation_table{
+	width:60px;
+	height:60px; 
+	display: grid;
+  	grid-gap: 1px;
+ 	grid-template-columns: repeat(3, 1fr); 
+	grid-template-columns: repeat(3, 1fr); 
+	margin:10px;
+}
+.orientation_arrow{
+	display:grid;
+	place-content:center;
+	font-size:large;
+  background-color: #ccc;
+	border:1px solid #141414;
+}
+
+.wf_puzzle_pagination{
+	display:flex; justify-content:center;
+}
+.wf_puzzle_pagination span{display:inline-block;padding:5px 15px; background-color:#fff; margin:5px 10px;border:1px solid #0081ff; border-radius:5px;cursor:pointer;transition:0.4s all ease-in-out;}
+.wf_puzzle_pagination span.active{ background-color:#609fd2;}
+
+
+input.error{color:red; border-color:red;}
+
+li.word{
+	
+}
+.show-word {
+  display:inline-block;
+	margin:0 5px 0 20px;
+  width: 13px;
+  height: 13px;
+  border: solid 1px #141414;
+  border-radius:  75% 15%;
+  position: relative;
+  transform: rotate(45deg);
+	cursor:pointer;
+	transition:0.4s all ease-in-out;
+	
+}
+.show-word:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border: solid 1px #141414;
+  border-radius: 50%;
+  left: 3px;
+  top: 3px;
+	transition:0.4s all ease-in-out;
+}
+.show-word:hover{background-color:#141414;}
+.show-word:hover:before{background-color:#fff;}
+
+.show-hint{display:inline-block; margin:0 0 0 10px; cursor:pointer;}
+.hidden-hint{font-size:0; transition:0.4s all ease-in-out;}
+
+
+.alphabet{background-color:#fff; display:inlinbe-block;padding:5px 10px; letter-spacing:2px;margin:0 10px;}
+.delete_alphabet{cursor:pointer; margin-left:10px; color: #e84c28;
+    font-weight: 600;}
+
+.wf_colors_wrapper{display:flex;flex-wrap:wrap;justify-content:space-between;}
+.wf_color_item{width:fit-content;}
+#ajax-response{transition:0.4s all ease-in-out;}
+#solve_popup{
+	position:fixed;
+	width:0;
+	height:0;
+	overflow:hidden;
+	transition:0.4s all ease-in-out;}
+#solve_popup.active{
+	width:300px;
+	height:150px;
+	top:calc( 50% - 75px );
+	bottom:calc( 50% - 75px );
+	left:calc( 50% - 150px );
+	right:calc( 50% - 150px );
+	padding:20px;
+	overflow-y:auto;
+	background-color:#fff;
+	border:1px solid #dedede;
+	border-radius:10px;
+	transition:0.4s all ease-in-out;}
+.active .popup-close{display:block; position:absolute; top:-1px; right:-1px;width:20px; height:20px; background-color:red;border:1px solid #fff; cursor:pointer;}
+.active .popup-close:before{content:'';display:block; width:10px; height:2px; transform:rotate(45deg);background-color:#fff;position:absolute;z-index:2; top:8px; left:4px;transition:0.4s all ease-in-out;}
+.active .popup-close:after{content:'';display:block; width:10px; height:2px; transform:rotate(-45deg);background-color:#fff;position:absolute;z-index:2;bottom:8px; right:4px;transition:0.4s all ease-in-out;}
+.active .popup-close:hover:before{transform:rotate(0deg);}
+.active .popup-close:hover:after{transform:rotate(90deg);}
